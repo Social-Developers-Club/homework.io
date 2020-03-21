@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeworkTranslateModule } from '../shared/translate/translate.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
+import { HomeworkService } from '../homework/services/homework.service';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TranslateModule } from '@ngx-translate/core';
     HeaderComponent
   ],
   providers: [
+    HomeworkService
   ]
 })
 

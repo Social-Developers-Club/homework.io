@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeworkService } from './services/homework.service';
 
 @Component({
   selector: 'app-homework',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeworkComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly homeworkService: HomeworkService
+  ) { }
 
   ngOnInit(): void {
+    this.homeworkService.getAllTeachers().subscribe(element => {
+      console.log('classes:', element);
+    });
   }
 
 }

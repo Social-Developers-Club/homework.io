@@ -1,8 +1,12 @@
 {
     "title": "Homework.io",
     "language": {
-        "language": "language",
+        "language": "Language",
         "english": "English",
         "german": "Deutsch"
-    }
+    },
+    "classes": "Class",
+    "students": "Students",
+    "teacher": "I am teacher",
+    "student": "I am student"
 }

@@ -4,7 +4,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'homnework', pathMatch: 'full' },
+  { path: '', redirectTo: 'homework', pathMatch: 'full' },
   { path: '', loadChildren: () => import('./homework/homework.module').then(m => m.HomeworkModule) },
   { path: '**', component: PageNotFoundComponent }
 ];
