@@ -9,6 +9,8 @@ import { HomeworkTranslateModule } from '../shared/translate/translate.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { TranslateModule } from '@ngx-translate/core';
 import { HomeworkService } from '../homework/services/homework.service';
+import { AuthGuard } from './auth/auth.guard';
+import { LoginService } from '../login/service/login.service';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { HomeworkService } from '../homework/services/homework.service';
     HeaderComponent
   ],
   providers: [
-    HomeworkService
+    HomeworkService,
+    LoginService,
+    AuthGuard
   ]
 })
 

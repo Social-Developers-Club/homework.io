@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeworkService } from '../services/homework.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly homeworkService: HomeworkService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  createTask(description: string){
+    this.homeworkService.createTask();
+  }
+
+  /* 
+  Description: string
+
+  school_class_id: number
+
+  subject_id: number
+
+  file_path: string
+
+  start_event :datetime
+  end_event :datetime
+   */
 }

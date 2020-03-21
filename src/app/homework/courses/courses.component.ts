@@ -29,7 +29,6 @@ export class CoursesComponent implements OnInit {
 
   selectCourse(course: string){
     // call service
-    this.router.navigate(['/classes']);
   }
 
 }

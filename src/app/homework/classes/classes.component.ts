@@ -30,7 +30,6 @@ export class ClassesComponent implements OnInit {
 
   selectClass(classString: string){
     // call service
-    this.router.navigate(['/tasks']);
   }
 
 }

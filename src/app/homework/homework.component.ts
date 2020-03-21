@@ -16,6 +16,10 @@ export class HomeworkComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.homeworkService.getAllSubjects().subscribe(element => {
+      console.log('subjects', element);
+    });
+
     this.route.params.subscribe(key => {
       const id = key.paramKey;
     });

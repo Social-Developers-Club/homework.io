@@ -21,5 +21,9 @@
     },
     "class": {
         "title": "Bitte wähle deine Klasse aus."
+    },
+    "task": {
+        "title": "Neue Aufgabe",
+        "description": "Beschreibung"
     }
 }

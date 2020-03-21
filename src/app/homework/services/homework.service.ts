@@ -39,4 +39,19 @@ export class HomeworkService {
                 .set('Content-Type', 'application/json, text/plain')
         });
     };
+
+    getAllSubjects() {
+        return this.http.get(`${environment.apiurl}/subjects`, {
+            headers: new HttpHeaders()
+                .set('Access-Control-Allow-Origin', '*')
+                .set('Content-Type', 'application/json, text/plain')
+        });
+    }
+    createTask() {
+        /*         return this.http.post(`${environment.apiurl}/homeworks`, 
+                    headers: new HttpHeaders()
+                        .set('Access-Control-Allow-Origin', '*')
+                        .set('Content-Type', 'application/json, text/plain')
+        });*/
+    }
 }
