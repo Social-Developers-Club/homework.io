@@ -2,35 +2,14 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-sm px-0">
             <div class="navbar-brand">
-                <span class="text-white">Homework.io</span>
+                <span class="text-white">{{ 'title' | translate }} </span>
             </div>
             <div class="row align-items-center float-right">
                 <!-- Language selection -->
                 <a class="navbar-brand navbar-collapse collapse custom-header dropdown dropdown-toggle"
                     (click)="openLanguages()" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <svg x="0px" y="0px" viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;"
-                        xml:space="preserve" class="language-icon">
-                        <style type="text/css">
-                            .st2 {
-                                fill: none;
-                                stroke: #ffffff;
-                                stroke-width: 35;
-                                stroke-linecap: round;
-                                stroke-linejoin: round;
-                            }
-                        </style>
-                        <g>
-                            <circle class="st2" cx="512" cy="511.46" r="400" />
-                            <path class="st2"
-                                d="M510.38,119c152.43,135.17,212,261.13,221.22,371v51.65c-9.18,109.82-68.79,235.78-221.22,370.95" />
-                            <path class="st2" d="M510.38,124c0,0-440,302.85-82.51,706.5" />
-                            <path class="st2" d="M743.19,718.44c-127.63-45.63-321.4-72.31-546.38,39.41" />
-                            <line class="st2" x1="510.38" y1="123.95" x2="510.38" y2="910.51" />
-                            <line class="st2" x1="115.78" y1="519.47" x2="902.61" y2="519.47" />
-                            <path class="st2" d="M277.68,323.35C410.79,370.94,611.33,399.2,844.5,289" />
-                        </g>
-                    </svg>
+                    {{ 'language.language' | translate }}
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" (click)="setLanguage('en')">{{'language.english' | translate}}</a>
                         <a class="dropdown-item" (click)="setLanguage('de')">{{'language.german' | translate}}</a>
@@ -51,8 +30,7 @@
     </nav>
     <!-- Burger-Menu content-->
     <div class="container visibility bg-white collapse navbar-collapse" id="navbarToggler">
-        <div id="carouselExampleControls" class="carousel slide" data-interval="false">
-            <ul>
+        <ul>
             <li class="nav-item py-1">
                 <a class="nav-link custom-menu" routerLink="">Klasse</a>
             </li>
@@ -68,7 +46,6 @@
             <li class="nav-item py-1">
                 <a class="nav-link custom-menu" routerLink="">Klasse</a>
             </li>
-            </ul>
-        </div>
+        </ul>
     </div>
 </header>

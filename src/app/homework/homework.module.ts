@@ -10,6 +10,9 @@ import { HomeworkComponent } from './homework.component';
   imports: [
     CommonModule,
     HomeworkRoutingModule
+  ],
+  exports: [
+    HomeworkComponent
   ]
 })
 export class HomeworkModule { }
