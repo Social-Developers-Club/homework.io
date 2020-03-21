@@ -4,5 +4,11 @@
         "language": "Sprache",
         "english": "English",
         "german": "Deutsch"
+    },
+    "navigation": {
+        "classes": "Klasse",
+        "students": "Schüler",
+        "teacher": "Ich bin Lehrer",
+        "student": "Ich bin Schüler"
     }
 }
