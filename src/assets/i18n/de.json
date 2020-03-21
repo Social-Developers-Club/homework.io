@@ -1,29 +1,29 @@
 {
-    "title": "Hausaufgaben.io",
-    "language": {
-        "language": "Sprache",
-        "english": "English",
-        "german": "Deutsch"
-    },
-    "navigation": {
-        "classes": "Klasse",
-        "students": "Schüler",
-        "teacher": "Ich bin Lehrer",
-        "student": "Ich bin Schüler"
-    },
-    "courses": {
-        "title": "Bitte wähle einen Kurs aus.",
-        "math": "Mathe",
-        "english": "Englisch",
-        "german": "Deutsch",
-        "bio": "Biologie",
-        "chemistry": "Chemie"
-    },
-    "class": {
-        "title": "Bitte wähle deine Klasse aus."
-    },
-    "task": {
-        "title": "Neue Aufgabe",
-        "description": "Beschreibung"
-    }
+  "title": "Hausaufgaben.io",
+  "language": {
+    "language": "Sprache",
+    "english": "English",
+    "german": "Deutsch"
+  },
+  "navigation": {
+    "classes": "Klasse",
+    "students": "Schüler",
+    "teacher": "Ich bin Lehrer",
+    "student": "Ich bin Schüler"
+  },
+  "courses": {
+    "title": "Bitte wähle einen Kurs aus.",
+    "math": "Mathe",
+    "english": "Englisch",
+    "german": "Deutsch",
+    "bio": "Biologie",
+    "chemistry": "Chemie"
+  },
+  "class": {
+    "title": "Meine Klassen"
+  },
+  "task": {
+    "title": "Neue Aufgabe",
+    "description": "Beschreibung"
+  }
 }

@@ -1,50 +1,69 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container-sm px-0">
-
-                <a class="text-white" routerLink="">{{ 'title' | translate }} </a>
-            <div class="row align-items-center float-right">
-                <!-- Language selection -->
-                <a class="navbar-brand navbar-collapse collapse custom-header dropdown dropdown-toggle"
-                    (click)="openLanguages()" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    {{ 'language.language' | translate }}
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" (click)="setLanguage('en')">{{'language.english' | translate}}</a>
-                        <a class="dropdown-item" (click)="setLanguage('de')">{{'language.german' | translate}}</a>
-                    </div>
-                </a>
-                <!-- Burger-Menu ICON only visible for Table-Device -->
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                    data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <div class="animated-icon">
-                        <span class="icon-bar top-bar"></span>
-                        <span class="icon-bar middle-bar"></span>
-                        <span class="icon-bar bottom-bar"></span>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </nav>
-    <!-- Burger-Menu content-->
-    <div class="container visibility bg-white collapse navbar-collapse" id="navbarToggler">
-        <ul>
-            <li class="nav-item py-1">
-                <a class="nav-link custom-menu" routerLink="">Klasse</a>
-            </li>
-            <li class="nav-item py-1">
-                <a class="nav-link custom-menu" routerLink="">Klasse</a>
-            </li>
-            <li class="nav-item py-1">
-                <a class="nav-link custom-menu" routerLink="">Klasse</a>
-            </li>
-            <li class="nav-item py-1">
-                <a class="nav-link custom-menu" routerLink="">Klasse</a>
-            </li>
-            <li class="nav-item py-1">
-                <a class="nav-link custom-menu" routerLink="">Klasse</a>
-            </li>
-        </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-sm px-0">
+      <div class="navbar-brand">
+        <span class="text-white">{{ 'title' | translate }}</span>
+      </div>
+      <div class="row align-items-center float-right">
+        <!-- Language selection -->
+        <a
+          class="navbar-brand navbar-collapse collapse custom-header dropdown dropdown-toggle"
+          (click)="openLanguages()"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {{ 'language.language' | translate }}
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" (click)="setLanguage('en')">{{
+              'language.english' | translate
+            }}</a>
+            <a class="dropdown-item" (click)="setLanguage('de')">{{
+              'language.german' | translate
+            }}</a>
+          </div>
+        </a>
+        <!-- Burger-Menu ICON only visible for Table-Device -->
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggler"
+          aria-controls="navbarToggler"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="animated-icon">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </div>
+        </button>
+      </div>
     </div>
+  </nav>
+  <!-- Burger-Menu content-->
+  <div
+    class="container visibility bg-white collapse navbar-collapse"
+    id="navbarToggler"
+  >
+    <ul>
+      <li class="nav-item py-1">
+        <a class="nav-link custom-menu" routerLink="">Klasse</a>
+      </li>
+      <li class="nav-item py-1">
+        <a class="nav-link custom-menu" routerLink="">Klasse</a>
+      </li>
+      <li class="nav-item py-1">
+        <a class="nav-link custom-menu" routerLink="">Klasse</a>
+      </li>
+      <li class="nav-item py-1">
+        <a class="nav-link custom-menu" routerLink="">Klasse</a>
+      </li>
+      <li class="nav-item py-1">
+        <a class="nav-link custom-menu" routerLink="">Klasse</a>
+      </li>
+    </ul>
+  </div>
 </header>

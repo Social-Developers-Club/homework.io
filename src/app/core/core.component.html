@@ -2,7 +2,9 @@
   <button type="button">
     <a [routerLink]="['/homework', {'paramKey': 'teacher'}]">{{ 'navigation.teacher' | translate }}</a>
   </button>
-  <button class="btn btn-outline-info" type="button">
-    <a [routerLink]="['/homework', {'paramKey': 'student'}]">{{ 'navigation.student' | translate }}</a>
+  <button type="button">
+    <a [routerLink]="['/homework', { paramKey: 'student' }]">{{
+      'navigation.student' | translate
+    }}</a>
   </button>
 </div>

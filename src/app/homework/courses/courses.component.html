@@ -1,6 +1,6 @@
-
-<span>{{ 'courses.title' | translate }}</span>
-<div *ngFor="let course of mockarry">
-    <button class="button" (click)="selectCourse(course)"> {{course}} </button>
+<div class="courses-wrapper">
+  <h1>{{ 'courses.title' | translate }}</h1>
+  <div *ngFor="let course of mockarry">
+    <button class="button" (click)="selectCourse(course)">{{ course }}</button>
+  </div>
 </div>
-
