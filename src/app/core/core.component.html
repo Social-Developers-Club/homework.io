@@ -1,5 +1,5 @@
 <div>
-    <a routerLink="/homework">{{ 'navigation.teacher' | translate }}</a>
-    <a routerLink="/homework">{{ 'navigation.student' | translate }}</a>
+    <a [routerLink]="['/courses', {'paramKey': 'teacher'}]">{{ 'navigation.teacher' | translate }}</a>
+    <a [routerLink]="['/homework', {'paramKey': 'student'}]">{{ 'navigation.student' | translate }}</a>
 </div>
 

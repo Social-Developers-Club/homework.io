@@ -5,8 +5,21 @@
         "english": "English",
         "german": "Deutsch"
     },
-    "classes": "Class",
-    "students": "Students",
-    "teacher": "I am teacher",
-    "student": "I am student"
+    "navigation": {
+        "classes": "Class",
+        "students": "Students",
+        "teacher": "I am teacher",
+        "student": "I am student"
+    },
+    "courses": {
+        "title": "Please select one course",
+        "math": "Math",
+        "english": "English",
+        "german": "German",
+        "bio": "Biology",
+        "chemistry": "Chemistry"
+    },
+    "class": {
+        "title": "Please select your class."
+    }
 }
