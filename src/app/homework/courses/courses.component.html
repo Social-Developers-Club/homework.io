@@ -1,1 +1,6 @@
-<p>courses works!</p>
+
+<span>{{ 'courses.title' | translate }}</span>
+<div *ngFor="let course of mockarry">
+    <button class="button" (click)="selectCourse(course)"> {{course}} </button>
+</div>
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-classes',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassesComponent implements OnInit {
 
-  constructor() { }
+  mockarry = [
+    '10',
+    '9',
+    '8',
+    '7',
+    '6',
+    '5',
+    '4',
+    '3',
+    '2',
+    '1'
+  ]
+
+  constructor(
+    private readonly router: Router) {
+  }
 
   ngOnInit(): void {
+  }
+
+  selectClass(classString: string){
+    // call service
+    this.router.navigate(['/tasks']);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
-  constructor() { }
+
+  mockarry = [
+    'math',
+    'english',
+    'german',
+    'bio',
+    'chemistry'
+  ]
+  constructor(
+    private route: ActivatedRoute,
+    private readonly router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(key => {
+      const id = key.paramKey;
+    });
+  }
+
+  selectCourse(course: string){
+    // call service
+    this.router.navigate(['/classes']);
   }
 
 }
