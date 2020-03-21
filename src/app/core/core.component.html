@@ -1,5 +1,8 @@
-<div>
+<div class="core-wrapper">
+  <button type="button">
     <a [routerLink]="['/courses', {'paramKey': 'teacher'}]">{{ 'navigation.teacher' | translate }}</a>
+  </button>
+  <button class="btn btn-outline-info" type="button">
     <a [routerLink]="['/homework', {'paramKey': 'student'}]">{{ 'navigation.student' | translate }}</a>
+  </button>
 </div>
-
