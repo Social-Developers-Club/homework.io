@@ -1,13 +1,14 @@
 <div class="custom-center" *ngIf="id === 'teacher'">
-    <div class="">
-        <app-courses></app-courses>
-        <app-classes></app-classes>
-        <app-tasks></app-tasks>
-    </div>
+  <div>
+    <app-courses></app-courses>
+    <app-classes></app-classes>
+    <app-tasks></app-tasks>
+  </div>
 </div>
 
-
 <div class="custom-center" *ngIf="id === 'student'">
+  <div>
     <app-courses></app-courses>
     <app-result></app-result>
+  </div>
 </div>
