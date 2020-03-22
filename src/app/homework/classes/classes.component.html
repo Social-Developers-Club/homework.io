@@ -1,5 +1,20 @@
-<span>{{ 'class.title' | translate }}</span>
+<!-- <span>{{ 'class.title' | translate }}</span>
 <div *ngFor="let class of classArray">
     <button class="button" (click)="selectClass(class)"> {{class.name}} </button>
-</div>
+</div> -->
 
+<div class="classes-wrapper">
+  <h2>{{ 'class.title' | translate }}</h2>
+  <div class="btn-wrapper">
+    <div *ngFor="let class of classArray" class="class-btn">
+      <input
+        type="radio"
+        id="{{ class.name }}"
+        name="classes"
+        value="{{ class.name }}"
+        (click)="selectClass(class)"
+      />
+      <label for="{{ class.name }}">{{ class.name }}</label>
+    </div>
+  </div>
+</div>
