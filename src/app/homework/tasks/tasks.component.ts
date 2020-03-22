@@ -40,7 +40,6 @@ export class TasksComponent implements OnInit {
       console.log(error);
     });
 
-
     this.homeworkService.createTask(
       environment.schoolClassId,
       environment.subjectId,
@@ -51,20 +50,5 @@ export class TasksComponent implements OnInit {
     }, error => {
       console.log(error);
     });
-
   }
-
-
-  /* 
-  Description: string
-
-  school_class_id: number
-
-  subject_id: number
-
-  file_path: string
-
-  start_event :datetime
-  end_event :datetime
-   */
 }
