@@ -1,0 +1,30 @@
+.classes-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+
+  .btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+
+    .class-btn {
+      margin: 10px 10px 15px 0;
+    }
+
+    input[type='radio'] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    label {
+      border: 2px solid rgb(207, 207, 206);
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    input[type='radio']:checked ~ label {
+      border: 2px solid #fb753b;
+    }
+  }
+}

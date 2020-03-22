@@ -6,6 +6,11 @@
   .btn-wrapper {
     display: flex;
     flex-wrap: wrap;
+    font-size: 1.25rem;
+
+    .cours-btn {
+      margin: 10px 10px 15px 0;
+    }
 
     input[type='radio'] {
       position: absolute;
@@ -21,11 +26,5 @@
     input[type='radio']:checked ~ label {
       border: 2px solid #fb753b;
     }
-  }
-
-  div {
-    position: relative;
-    font-size: 1.25rem;
-    margin: 10px 10px 15px 0;
   }
 }
