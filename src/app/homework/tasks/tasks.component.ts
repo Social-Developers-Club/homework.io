@@ -31,8 +31,17 @@ export class TasksComponent implements OnInit {
   }
 
   uploadFileToActivity() {
+    this.homeworkService.uploadFile(
+      this.fileToUpload
+    ).subscribe(data => {
+      console.log('data received', data);
+
+    }, error => {
+      console.log(error);
+    });
+
+
     this.homeworkService.createTask(
-      this.fileToUpload,
       environment.schoolClassId,
       environment.subjectId,
       this.description
@@ -42,7 +51,10 @@ export class TasksComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+
   }
+
+
   /* 
   Description: string
 

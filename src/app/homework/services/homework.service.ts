@@ -2,6 +2,8 @@ import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
+import { Time } from '@angular/common';
 
 @Injectable()
 export class HomeworkService {
@@ -50,10 +52,22 @@ export class HomeworkService {
     }
 
 
-    createTask(fileToUpload: File, courseId: number, subjectId: number, description: string) {
+    uploadFile(fileToUpload: File) {
         const formData: FormData = new FormData();
-        formData.append('fileKey', fileToUpload, fileToUpload.name);
-        return this.http.post(environment.apiurl, formData, {
+        formData.append('file', fileToUpload, fileToUpload.name);
+        return this.http.post(`${environment.apiurl}/file-upload`, formData, {
+            headers: new HttpHeaders()
+                .set('Access-Control-Allow-Origin', '*')
+        });
+    }
+
+
+    createTask(subject_id: number, school_class_id: number, description: string) {
+        let start_event = null;
+        let end_event = null;
+        let file_path = 'Ingo';
+        let teacher_id = 0;
+        return this.http.post(`${environment.apiurl}/homeworks`, { subject_id, description, school_class_id, end_event, start_event, file_path, teacher_id }, {
             headers: new HttpHeaders()
                 .set('Access-Control-Allow-Origin', '*')
                 .set('Content-Type', 'application/json, text/plain')
