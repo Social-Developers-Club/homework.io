@@ -32,7 +32,8 @@
     "submit": "Aufgabe erstellen"
   },
   "result": {
-    "title": "Neue Abgabe"
+    "title": "Neue Abgabe",
+    "file": "Datei auswählen"
   },
   "messages": {
     "uploadFail": "Upload fehlgeschlagen!",

@@ -25,13 +25,15 @@
     "task": {
         "title": "New task",
         "deadline": "Deadline",
-        "upload": "Upload Homework",
+        "upload": "Upload homework",
         "upload-button": "Choose file",
         "level": "Level",
-        "description": "Description"
+        "description": "Description",
+        "submit": "Create task"
     },
     "result": {
-        "title": "New submission"
+        "title": "New submission",
+        "file": "Chose file"
     },
     "messages": {
         "uploadFail": "Upload failed!",

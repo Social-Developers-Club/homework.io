@@ -1,23 +1,21 @@
-<div>
-    <span>{{ 'result.title' | translate }}</span>
- </div>
- <h2>
-    Neue Abgabe erstellen
- </h2>
- <form action="">
-    <form class="form-inline">
-  
-       <!-- FILEUPLOAD -->
-       <div class="form-group fileupload">
-          <input type="file" class="inputfile" id="file" (change)="handleFileInput($event.target.files)">
-          <label for="file">Datei auswählen</label>
-       </div>
-  
-       <!-- TEXTFIELD -->
-       <textarea name="description" id="description" placeholder="Kommentar..."
-          (change)="handleTextInput($event)"></textarea>
- 
-       <!-- SUBMITBUTTON -->
-       <input type="submit" value="Abgabe erstellen" (click)="uploadFileToActivity()">
-    </form>
- </form>
+<h2>
+   <div>
+      <span>{{ 'result.title' | translate }}</span>
+   </div>
+</h2>
+<form action="">
+   <form class="form-inline">
+
+      <!-- FILEUPLOAD -->
+      <div class="form-group fileupload">
+         <input type="file" class="inputfile" id="file" (change)="handleFileInput($event.target.files)">
+         <label for="file">{{ 'result.file' | translate }}</label>
+      </div>
+
+      <!-- TEXTFIELD -->
+      <textarea name="description" id="description" placeholder="Text ..." (change)="handleTextInput($event)"></textarea>
+
+      <!-- SUBMITBUTTON -->
+      <input type="submit" value="Abgabe erstellen" (click)="uploadFileToActivity()">
+   </form>
+</form>
