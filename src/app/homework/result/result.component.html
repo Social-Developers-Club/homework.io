@@ -1,21 +1,42 @@
-<h2>
-   <div>
-      <span>{{ 'result.title' | translate }}</span>
-   </div>
-</h2>
-<form action="">
-   <form class="form-inline">
-
+<div class="result-wrapper">
+  <div class="task">
+    <h2>LB, S.108, NR. 4,5,7a</h2>
+    <p>
+      Erledigt bitte die Aufgabe gründlich und ausführlich. Dokumentiert euren
+      Lösungsweg und ihn bis zur Deadline hoch. Viel Erfolg!
+    </p>
+    <div class="file">lb-s108.pdf</div>
+  </div>
+  <div>
+    <h2>{{ 'result.title' | translate }}</h2>
+  </div>
+  <form action="">
+    <form class="form-inline">
       <!-- FILEUPLOAD -->
       <div class="form-group fileupload">
-         <input type="file" class="inputfile" id="file" (change)="handleFileInput($event.target.files)">
-         <label for="file">{{ 'result.file' | translate }}</label>
+        <input
+          type="file"
+          class="inputfile"
+          id="file"
+          (change)="handleFileInput($event.target.files)"
+        />
+        <label for="file">{{ 'result.file' | translate }}</label>
       </div>
 
       <!-- TEXTFIELD -->
-      <textarea name="description" id="description" placeholder="Text ..." (change)="handleTextInput($event)"></textarea>
+      <textarea
+        name="description"
+        id="description"
+        placeholder="Text ..."
+        (change)="handleTextInput($event)"
+      ></textarea>
 
       <!-- SUBMITBUTTON -->
-      <input type="submit" value="Abgabe erstellen" (click)="uploadFileToActivity()">
-   </form>
-</form>
+      <input
+        type="submit"
+        value="Abgabe erstellen"
+        (click)="uploadFileToActivity()"
+      />
+    </form>
+  </form>
+</div>
