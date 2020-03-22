@@ -1,40 +1,69 @@
 <div>
-    <span>{{ 'task.title' | translate }}</span>
+   <span>{{ 'task.title' | translate }}</span>
 </div>
 <h2>
-    Neue Aufgabe erstellen
+   Neue Aufgabe erstellen
 </h2>
 <form action="">
-    <form class="form-inline">
+   <form class="form-inline">
 
-        <!-- DATEPICKER -->
-        <div class="form-group">
-            <div class="input-group">
-                <span>sleect deadline</span>
-                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
-                    #d="ngbDatepicker">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" style="width: 100px;" (click)="d.toggle()"
-                        type="button">select date</button>
-                </div>
+      <!-- DATEPICKER -->
+      <div class="form-group calendar">
+         <div class="input-group">
+            <div class="input-group-append">
+               <button class="calendar select-date" (click)="d.toggle()"
+                  type="button">
+                  <svg class="bi bi-calendar" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"/>
+                     <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                   </svg>
+               </button>
             </div>
-        </div>
+            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+               #d="ngbDatepicker">
+            
+         </div>
+      </div>
 
-        <!-- FILEUPLOAD -->
-        <div class="form-group">
-            <label for="file">Choose File</label>
-            <input type="file" id="file" (change)="handleFileInput($event.target.files)">
-        </div>
+      <!-- FILEUPLOAD -->
+      <div class="form-group fileupload">
+         <input type="file" class="inputfile" id="file" (change)="handleFileInput($event.target.files)">
+         <label for="file">Datei auswählen</label>
+      </div>
 
-        <!-- Difficulty -->
-        <input type="number" name="difficulty" id="difficulty" placeholder="Schwierigkeitsgrad" min="1" max="10"
-            pattern="[0-9]*">
+      <!-- Difficulty -->
+      <!-- <input type="number" name="difficulty" id="difficulty" placeholder="Schwierigkeitsgrad" min="1" max="10" pattern="[0-9]*"> -->
 
-        <!-- TEXTFIELD -->
-        <textarea name="description" id="description" placeholder="Beschreibung..."
-            (change)="handleTextInput($event)"></textarea>
+      <div class="form-group difficulty">
+         <label for="difficulty">
+            <svg class="bi bi-lightning-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M11.251.068a.5.5 0 01.227.58L9.677 6.5H13a.5.5 0 01.364.843l-8 8.5a.5.5 0 01-.842-.49L6.323 9.5H3a.5.5 0 01-.364-.843l8-8.5a.5.5 0 01.615-.09z" clip-rule="evenodd"/>
+            </svg>
+         </label>
+         <select name="difficulty" id="difficulty">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+         </select>
+      </div>
 
-        <!-- SUBMITBUTTON -->
-        <input type="submit" value="Aufgabe erstellen" (click)="uploadFileToActivity()">
-    </form>
+      <!-- TEXTFIELD -->
+      <textarea name="description" id="description" placeholder="Beschreibung..."
+         (change)="handleTextInput($event)"></textarea>
+
+      <!-- SUBMITBUTTON -->
+      <input type="submit" value="Aufgabe erstellen" (click)="uploadFileToActivity()">
+   </form>
 </form>
