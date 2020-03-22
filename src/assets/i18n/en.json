@@ -25,6 +25,9 @@
   "task": {
     "title": "New task",
     "deadline": "Deadline",
+    "upload": "Upload Homework",
+    "upload-button": "Choose file",
+    "level": "Level",
     "description": "Description"
   }
 }

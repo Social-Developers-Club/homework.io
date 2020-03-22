@@ -47,6 +47,7 @@
       </div>
 
       <!-- FILEUPLOAD -->
+      <h3>{{ 'task.upload' | translate }}</h3>
       <div class="form-group fileupload">
         <input
           type="file"
@@ -54,12 +55,12 @@
           id="file"
           (change)="handleFileInput($event.target.files)"
         />
-        <label for="file">Datei auswählen</label>
+        <label for="file">{{ 'task.upload-button' | translate }}</label>
       </div>
 
       <!-- Difficulty -->
       <!-- <input type="number" name="difficulty" id="difficulty" placeholder="Schwierigkeitsgrad" min="1" max="10" pattern="[0-9]*"> -->
-
+      <h3>{{ 'task.level' | translate }}</h3>
       <div class="form-group difficulty">
         <label for="difficulty">
           <svg
@@ -97,6 +98,7 @@
       </div>
 
       <!-- TEXTFIELD -->
+      <h3>{{ 'task.description' | translate }}</h3>
       <textarea
         name="description"
         id="description"
@@ -107,7 +109,7 @@
       <!-- SUBMITBUTTON -->
       <input
         type="submit"
-        value="Aufgabe erstellen"
+        value="{{ 'task.submit' | translate }}"
         (click)="uploadFileToActivity()"
       />
     </form>

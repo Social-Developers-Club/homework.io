@@ -25,6 +25,10 @@
   "task": {
     "title": "Neue Aufgabe erstellen",
     "deadline": "Abgabefrist",
-    "description": "Beschreibung"
+    "upload": "Hausaufgabe hochladen",
+    "upload-button": "Datei auswählen",
+    "level": "Level",
+    "description": "Beschreibung",
+    "submit": "Aufgabe erstellen"
   }
 }
