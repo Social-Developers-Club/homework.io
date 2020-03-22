@@ -25,5 +25,17 @@
     "task": {
         "title": "New task",
         "description": "Description"
+    },
+    "result": {
+        "title": "New submission"
+    },
+    "messages": {
+      "uploadFail": "Upload failed!",
+      "uploadSuccess": "Upload Success!",
+      "taskCreationFail": "Creating task failed!",
+      "taskCreationSuccess": "Creating task successful!",
+      "resultFailed": "Submission failed!",
+      "resultSuccess": "Submission successful!"
     }
-}
+  }
+  

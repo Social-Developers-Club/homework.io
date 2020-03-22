@@ -11,6 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HomeworkService } from '../homework/services/homework.service';
 import { AuthGuard } from './auth/auth.guard';
 import { LoginService } from '../login/service/login.service';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -24,7 +25,12 @@ import { LoginService } from '../login/service/login.service';
     HomeworkTranslateModule,
     TranslateModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-center',
+      preventDuplicates: true,
+    }),
   ],
   exports: [
     HeaderComponent

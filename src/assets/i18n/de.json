@@ -25,5 +25,16 @@
   "task": {
     "title": "Neue Aufgabe",
     "description": "Beschreibung"
+  },
+  "result": {
+      "title": "Neue Abgabe"
+  },
+  "messages": {
+    "uploadFail": "Upload fehlgeschlagen!",
+    "uploadSuccess": "Upload erfolgreich!",
+    "taskCreationFail": "Aufgabenerstellung fehlgeschlagen!",
+    "taskCreationSuccess": "Aufgabenerstellung erfolgreich!",
+    "resultFailed": "Abgabe fehlgeschlagen!",
+    "resultSuccess": "Abgabe erfolgreich!"
   }
 }

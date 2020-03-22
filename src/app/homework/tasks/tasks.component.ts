@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HomeworkService } from '../services/homework.service';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tasks',
@@ -16,7 +18,9 @@ export class TasksComponent implements OnInit {
   description: string;
 
   constructor(
-    private readonly homeworkService: HomeworkService
+    private readonly homeworkService: HomeworkService,
+    readonly toastrService: ToastrService,
+    private readonly translateService: TranslateService
   ) { }
 
   ngOnInit(): void {
@@ -34,10 +38,9 @@ export class TasksComponent implements OnInit {
     this.homeworkService.uploadFile(
       this.fileToUpload
     ).subscribe(data => {
-      console.log('data received', data);
-
+      this.toastrService.success(this.translateService.instant('messages.uploadSuccess'));
     }, error => {
-      console.log(error);
+      this.toastrService.error(this.translateService.instant('messages.uploadFail'));
     });
 
     this.homeworkService.createTask(
@@ -45,10 +48,9 @@ export class TasksComponent implements OnInit {
       environment.subjectId,
       this.description
     ).subscribe(data => {
-      console.log('data received', data);
-
+      this.toastrService.success(this.translateService.instant('messages.taskCreationSuccess'));
     }, error => {
-      console.log(error);
+      this.toastrService.error(this.translateService.instant('messages.taskCreationFail'));
     });
   }
 }

@@ -9,6 +9,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ResultComponent } from './result/result.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeworkComponent,
     ClassesComponent,
     TasksComponent,
-    CoursesComponent
+    CoursesComponent,
+    ResultComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeworkComponent,
     ClassesComponent,
     TasksComponent,
-    CoursesComponent
+    CoursesComponent,
+    ResultComponent
   ]
 })
 export class HomeworkModule { }
