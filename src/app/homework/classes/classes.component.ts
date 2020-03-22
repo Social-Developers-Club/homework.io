@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeworkService } from '../services/homework.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-classes',
@@ -8,28 +10,25 @@ import { Router } from '@angular/router';
 })
 export class ClassesComponent implements OnInit {
 
-  mockarry = [
-    '10',
-    '9',
-    '8',
-    '7',
-    '6',
-    '5',
-    '4',
-    '3',
-    '2',
-    '1'
-  ]
+  classArray: [];
 
   constructor(
-    private readonly router: Router) {
+    private readonly router: Router,
+    private readonly homeworkService: HomeworkService) {
   }
 
   ngOnInit(): void {
+    this.getAllClasses();
   }
 
-  selectClass(classString: string){
-    // call service
+  getAllClasses() {
+    this.homeworkService.getAllClasses().subscribe((element: any) => {
+      this.classArray = element;
+    })
+  }
+
+  selectClass(classString: any){
+    environment.schoolClassId = classString.id;
   }
 
 }

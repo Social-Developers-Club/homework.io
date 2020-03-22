@@ -1,3 +1,30 @@
 <div>
     <span>{{ 'task.title' | translate }}</span>
 </div>
+<h2>
+    Neue Aufgabe erstellen
+</h2>
+<form action="">
+    <input type="text" id="datepicker" placeholder="Deadline wählen..." />
+    <input type="file" name="file" id="file" class="inputfile" multiple onchange="updateList()" />
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+                    #d="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" style="width: 100px;" (click)="d.toggle()"
+                        type="button"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr />
+
+    <label for="file">Anhang hochladen</label>
+    <div id="file-list"></div>
+    <input type="number" name="difficulty" id="difficulty" placeholder="Schwierigkeitsgrad" min="1" max="15"
+        pattern="[0-9]*">
+    <textarea name="description" placeholder="Beschreibung..."></textarea>
+    <input type="submit" value="Aufgabe erstellen">
+</form>

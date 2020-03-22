@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeworkService } from '../services/homework.service';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-tasks',
@@ -8,6 +9,8 @@ import { HomeworkService } from '../services/homework.service';
 })
 export class TasksComponent implements OnInit {
 
+  model: NgbDateStruct;
+
   constructor(
     private readonly homeworkService: HomeworkService
   ) { }
@@ -15,7 +18,7 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createTask(description: string){
+  createTask(description: string) {
     this.homeworkService.createTask();
   }
 

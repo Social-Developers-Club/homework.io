@@ -1,5 +1,5 @@
 <span>{{ 'class.title' | translate }}</span>
-<div *ngFor="let class of mockarry">
-    <button class="button" (click)="selectClass(class)"> {{class}} </button>
+<div *ngFor="let class of classArray">
+    <button class="button" (click)="selectClass(class)"> {{class.name}} </button>
 </div>
 

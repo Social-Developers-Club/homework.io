@@ -1,0 +1,109 @@
+$highlight: #fb753b;
+
+* {
+	box-sizing: border-box;
+	font-family: "Inter";
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+body {
+	padding: 100px;
+}
+
+h2 {
+	margin-bottom: 30px;
+}
+
+form {
+	width: 350px;
+
+	textarea {
+		font-size: 16px;
+		padding: 15px;
+		border-radius: 5px;
+		width: 100%;
+		min-height: 150px;
+		resize: vertical;
+		border: 2px solid #f4f4f4;
+		margin-bottom: 15px;
+	}
+
+	input:not(#file) {
+		border-radius: 5px;
+		border: 2px solid $highlight;
+		font-size: 16px;
+		padding: 10px;
+		width: 100%;
+		margin-bottom: 15px;
+		color: $highlight;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		&[type=submit] {
+			background: $highlight;
+			color: #fff;
+		}
+	}
+	
+	.inputfile {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+	
+	.inputfile + label {
+		appearance: none;
+		border-radius: 5px;
+		border: 2px solid $highlight;
+		font-size: 16px;
+		padding: 10px;
+		width: 100%;
+		margin-bottom: 15px;
+		color: $highlight;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	#file-list {
+		span {
+			color: grey;
+			margin-bottom: 5px;
+			display: inline-block;
+			
+			&::after {
+				content: ' Datei:en angehängt';
+			}
+		}
+		
+		ul {
+			list-style: none;
+			
+			li {
+				border-radius: 5px;
+				border: 2px solid #f4f4f4;
+				font-size: 16px;
+				padding: 10px;
+				width: 100%;
+				margin-bottom: 15px;
+				color: #000;
+				text-align: center;
+				
+				&:last-child {
+					margin-bottom: 25px;	
+				}
+			}
+		}
+	}
+}

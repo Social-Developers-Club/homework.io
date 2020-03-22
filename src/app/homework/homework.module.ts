@@ -7,6 +7,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ClassesComponent } from './classes/classes.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { CoursesComponent } from './courses/courses.component';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { CoursesComponent } from './courses/courses.component';
   imports: [
     CommonModule,
     HomeworkRoutingModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule,
+    NgbModule
   ],
   exports: [
     HomeworkComponent,
