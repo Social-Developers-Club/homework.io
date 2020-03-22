@@ -1,29 +1,30 @@
 {
-    "title": "Homework.io",
-    "language": {
-        "language": "Language",
-        "english": "English",
-        "german": "Deutsch"
-    },
-    "navigation": {
-        "classes": "Class",
-        "students": "Students",
-        "teacher": "I am teacher",
-        "student": "I am student"
-    },
-    "courses": {
-        "title": "Please select one course",
-        "math": "Math",
-        "english": "English",
-        "german": "German",
-        "bio": "Biology",
-        "chemistry": "Chemistry"
-    },
-    "class": {
-        "title": "Please select your class."
-    },
-    "task": {
-        "title": "New task",
-        "description": "Description"
-    }
+  "title": "Homework.io",
+  "language": {
+    "language": "Language",
+    "english": "English",
+    "german": "Deutsch"
+  },
+  "navigation": {
+    "classes": "Class",
+    "students": "Students",
+    "teacher": "I am teacher",
+    "student": "I am student"
+  },
+  "courses": {
+    "title": "Please select one course",
+    "math": "Math",
+    "english": "English",
+    "german": "German",
+    "bio": "Biology",
+    "chemistry": "Chemistry"
+  },
+  "class": {
+    "title": "Please select your class."
+  },
+  "task": {
+    "title": "New task",
+    "deadline": "Deadline",
+    "description": "Description"
+  }
 }

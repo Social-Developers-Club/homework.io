@@ -23,7 +23,8 @@
     "title": "Meine Klassen"
   },
   "task": {
-    "title": "Neue Aufgabe",
+    "title": "Neue Aufgabe erstellen",
+    "deadline": "Abgabefrist",
     "description": "Beschreibung"
   }
 }
