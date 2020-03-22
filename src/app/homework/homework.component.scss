@@ -1,0 +1,9 @@
+.custom-center {
+    width: 100%;
+
+
+    & > div {
+        padding-left: auto;
+        padding-right: auto;
+    }
+}
