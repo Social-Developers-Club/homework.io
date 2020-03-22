@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeworkService } from '../services/homework.service';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tasks',
@@ -11,6 +12,9 @@ export class TasksComponent implements OnInit {
 
   model: NgbDateStruct;
 
+  fileToUpload: File = null;
+  description: string;
+
   constructor(
     private readonly homeworkService: HomeworkService
   ) { }
@@ -18,10 +22,27 @@ export class TasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createTask(description: string) {
-    this.homeworkService.createTask();
+  handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
   }
 
+  handleTextInput(inputdes: any) {
+    this.description = inputdes.target.value;
+  }
+
+  uploadFileToActivity() {
+    this.homeworkService.createTask(
+      this.fileToUpload,
+      environment.schoolClassId,
+      environment.subjectId,
+      this.description
+    ).subscribe(data => {
+      console.log('data received', data);
+
+    }, error => {
+      console.log(error);
+    });
+  }
   /* 
   Description: string
 

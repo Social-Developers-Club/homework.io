@@ -1,3 +1,11 @@
-<app-courses></app-courses>
-<app-classes></app-classes>
-<app-tasks></app-tasks>
+<div *ngIf="id === 'teacher'">
+    <app-courses></app-courses>
+    <app-classes></app-classes>
+    <app-tasks></app-tasks>
+</div>
+
+
+<div *ngIf="id === 'student'">
+    <app-courses></app-courses>
+    <app-classes></app-classes>
+</div>

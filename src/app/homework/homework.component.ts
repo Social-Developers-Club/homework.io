@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeworkComponent implements OnInit {
 
+  id: string;
+
   constructor(
     private readonly homeworkService: HomeworkService,
     private route: ActivatedRoute
@@ -21,12 +23,8 @@ export class HomeworkComponent implements OnInit {
     });
 
     this.route.params.subscribe(key => {
-      const id = key.paramKey;
+      this.id = key.paramKey;
     });
-
-    /* this.homeworkService.getAllTeachers().subscribe(element => {
-      console.log('classes:', element);
-    }); */
   }
 
 }

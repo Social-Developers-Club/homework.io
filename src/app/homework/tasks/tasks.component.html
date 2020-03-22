@@ -5,26 +5,36 @@
     Neue Aufgabe erstellen
 </h2>
 <form action="">
-    <input type="text" id="datepicker" placeholder="Deadline wählen..." />
-    <input type="file" name="file" id="file" class="inputfile" multiple onchange="updateList()" />
     <form class="form-inline">
+
+        <!-- DATEPICKER -->
         <div class="form-group">
             <div class="input-group">
+                <span>sleect deadline</span>
                 <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
                     #d="ngbDatepicker">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary calendar" style="width: 100px;" (click)="d.toggle()"
-                        type="button"></button>
+                        type="button">select date</button>
                 </div>
             </div>
         </div>
-    </form>
-    <hr />
 
-    <label for="file">Anhang hochladen</label>
-    <div id="file-list"></div>
-    <input type="number" name="difficulty" id="difficulty" placeholder="Schwierigkeitsgrad" min="1" max="15"
-        pattern="[0-9]*">
-    <textarea name="description" placeholder="Beschreibung..."></textarea>
-    <input type="submit" value="Aufgabe erstellen">
+        <!-- FILEUPLOAD -->
+        <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file" id="file" (change)="handleFileInput($event.target.files)">
+        </div>
+
+        <!-- Difficulty -->
+        <input type="number" name="difficulty" id="difficulty" placeholder="Schwierigkeitsgrad" min="1" max="10"
+            pattern="[0-9]*">
+
+        <!-- TEXTFIELD -->
+        <textarea name="description" id="description" placeholder="Beschreibung..."
+            (change)="handleTextInput($event)"></textarea>
+
+        <!-- SUBMITBUTTON -->
+        <input type="submit" value="Aufgabe erstellen" (click)="uploadFileToActivity()">
+    </form>
 </form>

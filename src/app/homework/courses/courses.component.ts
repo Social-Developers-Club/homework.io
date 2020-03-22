@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CoursesComponent implements OnInit {
 
-  subjectArray: [];
+  subjectArray: any;
 
   constructor(
     private readonly homeworkService: HomeworkService,
@@ -28,7 +28,13 @@ export class CoursesComponent implements OnInit {
 
   getCourses() {
     this.homeworkService.getAllSubjects().subscribe((element: any) => {
+      console.log('element', element);
       this.subjectArray = element;
+    },
+    (fail) => {
+      this.subjectArray = [
+        {name: 'Math', id: 0},
+        {name: 'English', id: 1}]
     });
   }
 

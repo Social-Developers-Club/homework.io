@@ -1,6 +1,7 @@
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class HomeworkService {
@@ -47,11 +48,15 @@ export class HomeworkService {
                 .set('Content-Type', 'application/json, text/plain')
         });
     }
-    createTask() {
-        /*         return this.http.post(`${environment.apiurl}/homeworks`, 
-                    headers: new HttpHeaders()
-                        .set('Access-Control-Allow-Origin', '*')
-                        .set('Content-Type', 'application/json, text/plain')
-        });*/
+
+
+    createTask(fileToUpload: File, courseId: number, subjectId: number, description: string) {
+        const formData: FormData = new FormData();
+        formData.append('fileKey', fileToUpload, fileToUpload.name);
+        return this.http.post(environment.apiurl, formData, {
+            headers: new HttpHeaders()
+                .set('Access-Control-Allow-Origin', '*')
+                .set('Content-Type', 'application/json, text/plain')
+        });
     }
 }

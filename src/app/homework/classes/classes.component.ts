@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ClassesComponent implements OnInit {
 
-  classArray: [];
+  classArray: any;
 
   constructor(
     private readonly router: Router,
@@ -24,7 +24,12 @@ export class ClassesComponent implements OnInit {
   getAllClasses() {
     this.homeworkService.getAllClasses().subscribe((element: any) => {
       this.classArray = element;
-    })
+    },
+    (fail) => {
+      this.classArray = [
+        {name: '4a', id: 0},
+        {name: '4b', id: 1}]
+    });
   }
 
   selectClass(classString: any){
