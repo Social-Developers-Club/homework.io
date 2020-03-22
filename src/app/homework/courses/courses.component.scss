@@ -3,20 +3,29 @@
   flex-direction: column;
   margin: 20px;
 
+  .btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type='radio'] {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    label {
+      border: 2px solid rgb(207, 207, 206);
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+
+    input[type='radio']:checked ~ label {
+      border: 2px solid #fb753b;
+    }
+  }
+
   div {
     position: relative;
     font-size: 1.25rem;
-    margin: 10px 0;
-    &::before {
-      position: absolute;
-      right: 15px;
-      top: 5px;
-      content: '';
-      width: 20px;
-      height: 20px;
-      border-top: 3px solid teal;
-      border-right: 3px solid teal;
-      transform: rotate(45deg);
-    }
+    margin: 10px 10px 15px 0;
   }
 }

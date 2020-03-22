@@ -1,6 +1,18 @@
 <div class="courses-wrapper">
-  <h1>{{ 'courses.title' | translate }}</h1>
-  <div *ngFor="let course of subjectArray">
-    <button class="button" (click)="selectCourse(course)">{{ course.name }}</button>
+  <h2>{{ 'courses.title' | translate }}</h2>
+  <div class="btn-wrapper">
+    <div *ngFor="let course of subjectArray">
+      <!-- <button class="button" (click)="selectCourse(course)">
+        {{ course.name }}
+      </button> -->
+      <input
+        type="radio"
+        id="{{ course.name }}"
+        name="course"
+        value="{{ course.name }}"
+        (click)="selectCourse(course)"
+      />
+      <label for="{{ course.name }}">{{ course.name }}</label>
+    </div>
   </div>
 </div>
