@@ -11,11 +11,10 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent implements OnInit {
+  model: NgbDateStruct
 
-  model: NgbDateStruct;
-
-  fileToUpload: File = null;
-  description: string;
+  fileToUpload: File = null
+  description: string
 
   constructor(
     private readonly homeworkService: HomeworkService,
@@ -27,11 +26,11 @@ export class TasksComponent implements OnInit {
   }
 
   handleFileInput(files: FileList) {
-    this.fileToUpload = files.item(0);
+    this.fileToUpload = files.item(0)
   }
 
   handleTextInput(inputdes: any) {
-    this.description = inputdes.target.value;
+    this.description = inputdes.target.value
   }
 
   uploadFileToActivity() {

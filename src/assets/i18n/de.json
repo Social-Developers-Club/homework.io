@@ -23,11 +23,16 @@
     "title": "Meine Klassen"
   },
   "task": {
-    "title": "Neue Aufgabe",
-    "description": "Beschreibung"
+    "title": "Neue Aufgabe erstellen",
+    "deadline": "Abgabefrist",
+    "upload": "Hausaufgabe hochladen",
+    "upload-button": "Datei auswählen",
+    "level": "Level",
+    "description": "Beschreibung",
+    "submit": "Aufgabe erstellen"
   },
   "result": {
-      "title": "Neue Abgabe"
+    "title": "Neue Abgabe"
   },
   "messages": {
     "uploadFail": "Upload fehlgeschlagen!",

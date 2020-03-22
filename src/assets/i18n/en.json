@@ -24,18 +24,21 @@
     },
     "task": {
         "title": "New task",
+        "deadline": "Deadline",
+        "upload": "Upload Homework",
+        "upload-button": "Choose file",
+        "level": "Level",
         "description": "Description"
     },
     "result": {
         "title": "New submission"
     },
     "messages": {
-      "uploadFail": "Upload failed!",
-      "uploadSuccess": "Upload Success!",
-      "taskCreationFail": "Creating task failed!",
-      "taskCreationSuccess": "Creating task successful!",
-      "resultFailed": "Submission failed!",
-      "resultSuccess": "Submission successful!"
+        "uploadFail": "Upload failed!",
+        "uploadSuccess": "Upload Success!",
+        "taskCreationFail": "Creating task failed!",
+        "taskCreationSuccess": "Creating task successful!",
+        "resultFailed": "Submission failed!",
+        "resultSuccess": "Submission successful!"
     }
-  }
-  
+}
