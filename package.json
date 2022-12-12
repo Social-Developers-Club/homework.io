@@ -29,7 +29,7 @@
     "classlist": "2.0.0",
     "classlist.js": "1.1.20150312",
     "core-js": "3.6.4",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "jquery": "3.4.1",
     "ngx-toastr": "12.0.0",
     "popper.js": "1.14.3",
